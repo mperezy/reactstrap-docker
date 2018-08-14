@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  reactsample:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: myfirstapp
+    restart: always
+    ports:
+      - "9003:3000"
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    command:
+      #sh -c "npm run idk"
+      #sh -c "npm run some-rs-dependecies"
+      #sh -c "npm run reactstrap"
+      sh -c "npm run start"
