@@ -37,10 +37,6 @@ class App extends Component {
         alert("This is a " + buttonType + " button");
     }
 
-    /*alertFunction() {
-        this.modal.toggle();
-    }*/
-
     render() {
         return (
             <div className="App">

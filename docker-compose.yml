@@ -13,7 +13,4 @@ services:
       - '.:/usr/src/app'
       - '/usr/src/app/node_modules'
     command:
-      #sh -c "npm run idk"
-      #sh -c "npm run some-rs-dependecies"
-      #sh -c "npm run reactstrap"
       sh -c "npm run start"
