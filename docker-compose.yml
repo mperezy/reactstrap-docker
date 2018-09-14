@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: myfirstapp
+    container_name: reactstrap-docker
     restart: always
     ports:
       - "9003:3000"
