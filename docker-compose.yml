@@ -1,9 +1,9 @@
 version: '3.5'
 
 services:
-  reactstrap:
+  reactstrap-example:
     build: .
-    container_name: reactstrap-docker
+    container_name: reactstrap-docker-example
     working_dir: /usr/src/app
     volumes:
       - './:/usr/src/app'
