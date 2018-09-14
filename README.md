@@ -1,4 +1,4 @@
-# Reactstrap + Docker Template Project
+# Reactstrap + Docker Example Project
 
 Only for development:
 
@@ -9,10 +9,10 @@ Only for development:
 * The project automatically will start and for begin navigate follow these endpoints:
     * For natives docker users like **Windows Pro/Ent, Linux, Mac latest versions**: 
         ```bash
-        http://localhost:9003
+        http://localhost:3001
         ```
-    * For Windows/Mac older versions using **Docker Toolbox**: 
+    * For Windows/Mac older versions using **Docker Toolbox** (VirtualBox): 
         ```bash 
-        http://192.168.99.100:9003
+        http://{DOCKER-MACHINE-IP}:3001
         ```
 * Enjoy developing!!
