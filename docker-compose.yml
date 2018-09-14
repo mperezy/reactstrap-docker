@@ -9,7 +9,7 @@ services:
       - './:/usr/src/app'
       - '/usr/src/app/node_modules'
     ports:
-      - "9003:3000"
+      - "3001:3001"
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
