@@ -1,16 +1,15 @@
-version: '2'
+version: '3.5'
 
 services:
-  reactsample:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  reactstrap:
+    build: .
     container_name: reactstrap-docker
-    restart: always
+    working_dir: /usr/src/app
+    volumes:
+      - './:/usr/src/app'
+      - '/usr/src/app/node_modules'
     ports:
       - "9003:3000"
-    volumes:
-      - '.:/usr/src/app'
-      - '/usr/src/app/node_modules'
-    command:
-      sh -c "npm run start"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
