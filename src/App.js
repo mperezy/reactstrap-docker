@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ModalExample from './components/Modal';
+import CustomModal from './components/CustomModal';
 import {
     Collapse,
     Navbar,
@@ -34,7 +35,7 @@ class App extends Component {
     }
 
     alertFunction(event, buttonType){
-        alert("This is a " + buttonType + " button");
+        alert("This is a " + buttonType + " button\nThis message was thrown using alert()");
     }
 
     render() {
@@ -49,10 +50,13 @@ class App extends Component {
                     Hello Blazzing Red, how you doing guys?
                 </p>
                 <div>
-                    <ModalExample ref={modal => this.modal = modal}/><br/>
                     <Button color="primary" onClick={(e) => this.alertFunction(e, 'primary')}>Primary button</Button>{' '}
                     <Button color="success" onClick={(e) => this.alertFunction(e, 'success')}>Success button</Button>{' '}
-                    <Button color="danger" onClick={(e) => this.alertFunction(e, 'danger')}>Danger button</Button>
+                    <Button color="danger" onClick={(e) => this.alertFunction(e, 'danger')}>Danger button</Button><br/><br/>
+                    <ModalExample ref={modal => this.modal = modal}/><br/>
+                    <CustomModal colorName="primary" typeModal={"Primary"} ref={modal => this.modal = modal}/>
+                    <CustomModal colorName="success" typeModal={"Success"} ref={modal => this.modal = modal}/>
+                    <CustomModal colorName="danger" typeModal={"Danger"} ref={modal => this.modal = modal}/>
                 </div>
                 <br/>
                 <div>
@@ -74,7 +78,7 @@ class App extends Component {
                         <Container>
                             <Row>
                                 <Col>
-                                    <h1>Welcome to this, madaqas!</h1>
+                                    <h1>Welcome to this, madafaqas!</h1>
                                     <p>
                                         <Button
                                             tag="a"

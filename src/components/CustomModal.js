@@ -1,12 +1,11 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-class ModalExample extends React.Component {
+class CustomModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            modal: false,
-            buttonType: ""
+            modal: false
         };
 
         this.toggle = this.toggle.bind(this);
@@ -20,15 +19,15 @@ class ModalExample extends React.Component {
 
     render(){
         return (
-            <div>
-                <Button color="secondary" onClick={this.toggle}>Modal Window</Button>
+            <div className="div-inline">
+                <Button color={this.props.colorName} onClick={this.toggle}>{this.props.typeModal} Modal Window</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Modal Title</ModalHeader>
                     <ModalBody>
-                        This is my modal window, bietch!!
+                        This is my modal window, bietch! It launched by a {this.props.typeModal} button.
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
+                        <Button color="primary" onClick={this.toggle}>Do Something</Button>
                         <Button color="danger" onClick={this.toggle}>Cancel</Button>
                     </ModalFooter>
                 </Modal>
@@ -37,4 +36,4 @@ class ModalExample extends React.Component {
     }
 }
 
-export default ModalExample;
+export default CustomModal;
